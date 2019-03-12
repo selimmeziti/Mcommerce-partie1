@@ -117,4 +117,11 @@ public class ProductController {
         return produitsMarge;
     }
 
+    @GetMapping (value="/ProduitsOrder")
+    public MappingJacksonValue trierProduitsParOrdreAlphabetique() {
+        System.out.println("qsddfsqdf");
+        return new MappingJacksonValue(productDao.findAllByOrderByNom());
+    }
+
+
 }
